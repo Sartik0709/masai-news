@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #news{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0px;
+        background-color: rgb(242,243,251);
+        align-items: center;
+        padding: 60px; 
+        flex-wrap: wrap;
+       }
+       #news>div{
+        height: 500px;
+        width: 350px;
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        
+
+       }
+       h1{
+        background-color: aqua;
+        text-align: center;
+        margin: 0px;    
+        background-color: rgb(242,243,251);
+        padding-top: 20px;
+       }
+       #date{
+        color: blue;
+        font-size: larger;
+        padding-left: 21px;
+       }
+       #titl{
+        padding-left:  21px;
+        font-size: medium;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
+       #des{
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 21px;
+        width: fit-content;
+       }
+       #log{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+       }
+       #temp{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-evenly;
+        align-content: center;
+        margin-top: 0px;
+       }
+       #temp>div{
+        flex-wrap: wrap;
+        padding: 0%;
+        margin-top:30px;
+       }
+    </style>
+</head>
+<body>
+    <div>
+    <h1> Masai In The News</h1>
+   </div>
+   <div id="news">
+   <div>
+        <div style="box-shadow: 0 0 0 .1em rgb(0, 0, 0); width:fit-content; margin:50px;  border-radius: 5px; height: 180px; text-align: center; align-items: center; display: flex; flex-wrap: wrap;"><img src="data:image/png;base64,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" alt="" style="height: 40px; width: 210px; text-align: center;margin:20px;">
+    
+    </div>
+    <div> 
+        <p id="date">21 Dec 2021</p>
+        <p id="titl">Edutech Startup Masai School<br> acuquiers data analytics firm <br>Prepleaf for $1 Million.   </p>
+        <p id="des"> With their latest acuisation, Masai <br>moves one step closer to becoming...</p>
+    </div>
+</div>
+    <div>
+        <div style="box-shadow: 0 0 0 .1em rgb(0, 0, 0); width:250px; margin:50px;  border-radius: 5px;height: 180px; text-align: center; align-items: center; display: flex; flex-wrap: wrap;"><img src="https://cdn.freelogovectors.net/wp-content/uploads/2022/01/moneycontrol-logo-freelogovectors.net_.png" alt="" style="height: 40px; width: 210px; text-align: center;margin:20px;">
+        </div>
+        <div> 
+            <p id="date">26 Oct 2021</p>
+            <p id="titl">Kunal Shah, Vijay Shekhar Sharma, Amrish Rau among 21 angel investors in Masai School</p>
+            <p id="des"> Masai School is aiming to expand to 20 smaller cities by March 2022 and exp...</p>
+        </div>
+    </div>
+    
+    <div>
+        <div style="box-shadow: 0 0 0 .1em rgb(0, 0, 0); width:250px; margin:50px; border-radius: 5px;height: 180px; text-align: center; align-items: center; display: flex; flex-wrap: wrap;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb2g-07d6fI9M5YpArPjfAeE3pRfjfR5MfZ7eBeUY-dA&s" alt="" style="height: 40px; width: 210px; text-align: center;padding: 20px;">
+        </div>
+        <div> 
+            <p id="date">18 Aug 202</p>
+            <p id="titl">Unitus Ventures leads pre- <br>Series A funding for <br> focussed Masai School</p>
+            <p id="des"> Masai School is aiming to expand to 20 smaller cities by March 2022 and exp...</p>
+        </div>
+    </div>
+</div>
+    <div style="margin-top: 0px; background-color: rgb(242,243,251); height: 50px; display: flex; justify-content: center; flex-wrap: wrap;"><div style=" background-color: rgb(242,243,251);border: 1px solid red; height: 40px; width:120px; display: flex ;justify-content: center; align-items: center;flex-wrap: wrap; border-radius: 5px; color: red;">SEE MORE >
+    </div>
+    <div id="log"> 
+        <h1 style="background-color: white; margin-bottom: 0px; padding-bottom: 0px;">Our Investors (Who believed in us)</h1>
+        <div id="temp"> 
+            <div><img src="https://www.masaischool.com/images/our-investors/unitus-borderless.svg" alt="" style="height: 160px; width: 300px; padding-left: 0px;border: 1px solid rgb(219, 219, 219); border-radius: 20px;"> </div>
+            <div><img src="https://www.masaischool.com/images/our-investors/omidyar-borderless.svg" alt=""  style="height: 160px; width: 300px; padding-left: 0px;border: 1px solid rgb(219, 219, 219); border-radius: 20px;"></div>
+            <div><img src="https://www.masaischool.com/images/our-investors/india-q-borderless.svg" alt=""  style="height: 160px; width: 300px; padding-left: 0px;border: 1px solid rgb(219, 219, 219); border-radius: 20px;"></div>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>
